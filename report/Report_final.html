@@ -9050,7 +9050,7 @@ With a small dataset and batch size 4, much of the time is probably spent on loa
 augmenting images and on the forward pass, which both approaches share. Epoch times also varied
 between about 13 and 20 seconds, so this difference should not be over-interpreted. With a
 larger dataset, or one very different from ImageNet, fine-tuning would be expected to gain more.</p>
-<p>For the feature extractor, training accuracy stays below validation accuracy at every epoch (about 90% vs 95% at the end). For fine-tuning the two are about equal in later epochs. This is because training images are
+<p>For the feature extractor, training accuracy stays below validation accuracy at every epoch (about 90% vs 95% at the end). For fine-tuning the two are about equal in later epochs. For the feature extractor, the gap exists because training images are
 randomly cropped and flipped, which makes them harder than the fixed center-cropped validation images.
 Also, the best epoch is chosen using the same validation images that the accuracy is reported on, so
 "best val acc" is slightly optimistic. The last-epoch value is a fairer estimate.</p>

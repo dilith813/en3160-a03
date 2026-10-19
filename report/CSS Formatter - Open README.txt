@@ -1,0 +1,1 @@
+document.querySelectorAll('pre').forEach(e => { e.style.whiteSpace = 'pre-wrap'; e.style.wordBreak = 'break-all'; });
